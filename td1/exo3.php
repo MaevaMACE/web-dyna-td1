@@ -6,7 +6,7 @@
 </head>
 
 <body>
-	<form method="GET">
+	<form method="POST">
 		<label for="color">Color :</label>
 		<input type="color" id="color" onchange="ClickColor(0, -1, -1, 5)" value="black" name="color">
 		<label for="size">Size :</label>
@@ -21,17 +21,17 @@
 <a href="?size=45&color=blue&message=je m'appelle maeva">Message 3</a>
 
 <?php
-	if (empty($_GET)) {
+	if (empty($_POST)) {
 		echo "Il y a une erreur dans les paramètres";
 	}
-	if (empty($_GET["size"] and $_GET["color"])) {
+	if (empty($_POST["size"] and $_POST["color"])) {
 		echo "<div style='font-size': 12px; color: black'>{$_GET["message"]}</div>";
 	}
 	else{
-		echo "<div style='font-size: {$_GET["size"]}px, color: {$_GET["color"]}'>{$_GET["message"]}</div>";
+		echo "<div style='font-size: {$_POST["size"]}px, color: {$_POST["color"]}'>{$_POST["message"]}</div>";
 	} 
 ?>
-<div style="font-size: <?php echo $_GET["size"]; ?>px; color: <?php echo $_GET["color"]; ?>"><?php echo $_GET["message"]; ?></div>
+<div style="font-size: <?php echo $_POST["size"]; ?>px; color: <?php echo $_POST["color"]; ?>"><?php echo $_POST["message"]; ?></div>
 
 </body>
 </html>
