@@ -1,15 +1,26 @@
 <?php
 namespace controllers;
  /**
- * Controller InscriptionsController
+ * Controller InscriptionController
  **/
-class InscriptionsController extends ControllerBase{
+ class InscriptionController extends ControllerBase{
 
-/**
- *
- * @get("_default","name"=>"Home")
- */
-public function index() {
-    $this->loadView($InscriptionsController/index.html);  
-}
+	/**
+	*
+	* @get("_default","name"=>"Home")
+	*/
+	public function index(){
+		$this->loadView("InscriptionController/index.html");
+		$this->loadView($defaultPage,compact('defaultPage'));
+	}
+
+	/**
+	 *@route("inscription")
+	**/
+	public function bouton(){
+		
+		$this->loadView('InscriptionController/bouton.html');
+
+	}
+
 }
