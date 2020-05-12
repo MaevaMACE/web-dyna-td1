@@ -5,7 +5,11 @@ namespace controllers;
  **/
 class InscriptionsController extends ControllerBase{
 
-	public function index(){
-		$this->loadView("InscriptionsController/index.html");
-	}
+/**
+ *
+ * @get("_default","name"=>"Home")
+ */
+public function index() {
+    $this->loadView($InscriptionsController/index.html);  
+}
 }
