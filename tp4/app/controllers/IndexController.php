@@ -19,7 +19,6 @@ class IndexController extends ControllerBase{
 		if(sizeof($themes)>0){
 			$this->loadView('@activeTheme/main/vMenu.html',compact('themes','activeTheme'));
 		}
-		
 	}
 
 
